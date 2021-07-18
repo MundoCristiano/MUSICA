@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+	padding: 0;
+}	
+
+/*listas de reproducccion*/
+body{
+	margin: 0;
+	height: 100%;
+	background: url(fondo.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+	justify-content: center;
+	align-items: center;
+}
+body::before{
+	content:"";
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: linear-gradient(135deg,navy,lightblue,navy,purple,pink,purple);
+	opacity: 0.8;
+	z-index: -1;
+}
+
+.detalles{
+	width: 70%;
+    display: flex;
+	align-items: center;
+	flex-direction: column;
+    justify-content: center;
+	margin: 15px auto;
+}
+
+@media (max-width: 768px) {
+    .detalles {
+        width: 90%;
+    }
+}
+
+.album-cover{
+    width: 300px;
+    height: 300px;
+	padding: 5px;
+	margin: 5px auto;
+	border: solid white 1px;
+	border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    .album-cover {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+h2{
+	width: 70%;
+	height: 10%;
+	text-align: center;
+	font-weight: bold;
+	color:white;
+	text-shadow: black 5px 5px 5px;
+	font-size: 1.5em;
+}
+
+@media (max-width: 768px) {
+    h2 {
+        width: 90%;
+		font-size: 1em;
+    }
+}
+
+#audio{
+	margin: 1em;
+	height: 20px;
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+	display: table-cell;
+	vertical-align: middle;
+    background: linear-gradient(90deg,#52c4df,#ad55c1);
+	opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+    #audio {
+        width: 90%;
+    }
+}
+
+#playlist, audio{
+    padding:0.1em;
+    list-style: none;
+	margin: 0.1em;
+	border-radius: 1em;
+}
+
+a {
+    text-decoration:none;
+    text-align: center;
+}
+
+.active a {
+    color:white;
+    text-decoration:none;
+    font-weight: bold;
+	background: linear-gradient(270deg,#52c4df,blue,navy,purple,#ad55c1,pink);
+	opacity: 0.9;
+	border: solid 1px;
+}
+li a{
+	width: 70%;
+    color: navy;
+	padding:5px;
+    display:block;
+	margin: 2px auto;
+    background: linear-gradient(0deg,lightblue,white);
+	opacity: 0.8;
+	border-radius: 0.3em;
+	font-size: 1.5em;
+}
+
+@media (max-width: 768px) {
+    li a {
+        width: 90%;
+		font-size: 1em;
+    }
+}
