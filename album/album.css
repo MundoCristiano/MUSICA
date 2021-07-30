@@ -95,11 +95,11 @@ a {
 /*listas de reproducccion*/
 li a{
     color: white;
-	font-weight: bold;
+	text-shadow: black 1px 1px 1px;
 	padding: 5px;
     display:block;
 	margin: 2px auto;
-    background: linear-gradient(0deg,rgb(0, 0, 0, 0.3),rgb(255, 255, 255, 0.7), rgb(0, 0, 0, 0.3));
+    background: linear-gradient(0deg,rgb(0, 0, 0, 0.3),rgb(255, 255, 255, 0.3), rgb(0, 0, 0, 0.3));
 	opacity: 0.8;
 	border-radius: 0.3em;
 }
