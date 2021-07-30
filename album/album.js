@@ -53,3 +53,11 @@ function run(song, audio, link){
         audio.load();
         audio.play();
 }
+
+/* deshabilitar boton de descarga */
+window.onload = function() {
+    audio = document.querySelector('audio');
+    if (audio) {
+       audio.setAttribute("controlsList", "nodownload");
+    }
+};
