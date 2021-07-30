@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,6 +17,7 @@
 
 body{
 	margin: 0;
+    width: 100%;
 	height: 100%;
 	background: url(fondo-menu.jpg);
 	background-size: cover;
@@ -25,6 +26,7 @@ body{
 	background-attachment: fixed;
 	justify-content: center;
 	align-items: center;
+    padding: 10px;
 }
 
 body::before{
@@ -39,40 +41,128 @@ body::before{
 	z-index: -1;
 }
 
+/* contenedor lista */
+ul {
+    border: solid white 0.5px; 
+    width: 100%;
+    margin: 0px auto;
+}
+
+/* fondo lista de cantantes */
 #lista li{
-    background-color: rgb(255, 255, 255, 0.2);
+    background-color: rgba(0, 0, 0, 0.2);
     height: auto;
     text-align: center;
-    margin: 1em auto;
-}
-
-@media (max-width: 768px) {
-    #lista li{
-        width: 90%;
-        height: auto;
-    }
-}
-
-#lista{
-    border-radius: 0.3em;
     list-style: none;
-    text-align: center; 
-    margin: 0.5em auto;
-    padding: 0.5em;
+    border-radius: 0.2em;
 }
 
+
+/* lista de cantantes */
 #lista li a{
+    list-style: none;
     text-decoration: none;
     color: white;
     text-shadow: 1px 1px 1px black;
-	font-size: 24px;
 }
 
-@media (max-width: 768px) {
-    #lista li a{
-        font-size: 16px;
+li {
+    margin: 0.5em auto;
+    padding: 0.5em;
+
+}
+
+
+
+/* media query pantalla vertical */
+@media (orientation: portrait) {
+	@media only screen and (max-width: 768px) {
+    ul {
+        height: 96.5vh;
+        overflow: auto;
+    }
+    #lista li {
+        width: 90%;
+        height: auto;
+    }
+    #lista li a {
+        width: 90%;
+		font-size: 1em;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    ul {
+        height: 98vh;
+        overflow: auto;
+    }
+    #lista li{
+        width: 70%;
+        height: auto;
+    }
+    #lista li a {
+        width: 70%;
+		font-size: 1.3em;
+    }
 }
 }
+
+/* media query pantalla horizontal */
+@media (orientation: landscape) {
+    @media only screen and (max-width: 768px) {
+        body {
+			background: url(fondo-menu2.jpg);
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center;
+			background-attachment: fixed;
+			justify-content: center;
+			align-items: center;
+			margin: 0px auto;
+			display: flex;
+		}
+        ul {
+            height: 93vh;
+            overflow: auto;
+        }
+        #lista li {
+            width: 70%;
+            height: auto;
+        }
+        #lista li a {
+            width: 70%;
+            font-size: 1em;
+        }
+	}
+
+    @media only screen and (min-width: 768px) {
+		body {
+			background: url(fondo-menu2.jpg);
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center;
+			background-attachment: fixed;
+			justify-content: center;
+			align-items: center;
+			margin: 0px auto;
+			display: flex;
+		}
+        ul {
+            height: 97vh;
+            overflow: auto;
+        }
+        #lista li {
+            width: 60%;
+            height: auto;
+        }
+        #lista li a {
+            width: 60%;
+            font-size: 1.3em;
+        }
+	}
+}
+
+
 </style>
 <body>
     <h1></h1>
